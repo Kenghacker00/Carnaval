@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // FormLaptop
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1048, 450);
-            Name = "FormLaptop";
-            Text = "FormLaptop";
-            Load += FormLaptop_Load;
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormLaptop";
+            this.Text = "FormLaptop";
+            this.Load += new System.EventHandler(this.FormLaptop_Load);
+            this.ResumeLayout(false);
         }
 
         #endregion

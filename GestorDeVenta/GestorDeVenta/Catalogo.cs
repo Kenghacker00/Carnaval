@@ -34,11 +34,30 @@ namespace GestorDeVenta
         private void CargarLaptops()
         {
             var laptops = gestorDatos.ObtenerLaptops();
-            foreach (var lap in laptops)
+            FlowLayoutPanel panel = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoScroll = true };
+
+            foreach (var laptop in laptops)
             {
-                var panel = CrearPanelLaptop(lap);
-                flowLayoutPanel1.Controls.Add(panel);
+                Panel laptopPanel = new Panel { Width = 200, Height = 300, Margin = new Padding(10) };
+
+                PictureBox pictureBox = new PictureBox { Width = 180, Height = 120, SizeMode = PictureBoxSizeMode.Zoom };
+                pictureBox.LoadAsync(laptop.ImagenUrl);
+
+                Label lblMarca = new Label { Text = laptop.Marca, Width = 180 };
+                Label lblModelo = new Label { Text = laptop.Modelo, Width = 180 };
+                Label lblPrecio = new Label { Text = $"Precio: ${laptop.Precio}", Width = 180 };
+                Label lblStock = new Label { Text = $"Stock: {laptop.Stock}", Width = 180 };
+
+                laptopPanel.Controls.Add(pictureBox);
+                laptopPanel.Controls.Add(lblMarca);
+                laptopPanel.Controls.Add(lblModelo);
+                laptopPanel.Controls.Add(lblPrecio);
+                laptopPanel.Controls.Add(lblStock);
+
+                panel.Controls.Add(laptopPanel);
             }
+
+            this.Controls.Add(panel);
         }
 
         private Panel CrearPanelLaptop(Laptop laptop)

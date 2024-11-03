@@ -109,3 +109,5 @@ C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\
 C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\ref\GestorDeVenta.dll
 C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.BaseForm.resources
 C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.BaseForm.resources
+C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.AdminPanel.resources
+C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.FormLaptop.resources

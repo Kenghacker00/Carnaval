@@ -20,6 +20,8 @@ namespace GestorDeVenta
             InitializeComponent();
             ConfigurarInterfaz();
             CargarDatos();
+
+            this.Activated += (s, e) => CargarDatos();
         }
 
         private void AdminPanel_Load(object sender, EventArgs e)
@@ -40,6 +42,20 @@ namespace GestorDeVenta
                 SelectionMode = DataGridViewSelectionMode.FullRowSelect,
                 MultiSelect = false
             };
+
+            // Agregar columnas al DataGridView
+            dgvLaptops.Columns.AddRange(new DataGridViewColumn[]
+            {
+            new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "ID", Width = 50 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "Marca", HeaderText = "Marca", Width = 100 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "Modelo", HeaderText = "Modelo", Width = 100 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "Procesador", HeaderText = "Procesador", Width = 100 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "RAM", HeaderText = "RAM (GB)", Width = 80 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "Almacenamiento", HeaderText = "Almacenamiento", Width = 100 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "Precio", HeaderText = "Precio", Width = 80 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "ImagenUrl", HeaderText = "URL de Imagen", Width = 150 },
+            new DataGridViewTextBoxColumn { DataPropertyName = "Stock", HeaderText = "Stock", Width = 80 }
+            });
 
             // Botones de acción
             Button btnAgregar = new Button
@@ -87,7 +103,29 @@ namespace GestorDeVenta
 
         private void CargarDatos()
         {
-            dgvLaptops.DataSource = gestorDatos.ObtenerLaptops();
+            try
+            {
+                var laptops = gestorDatos.ObtenerLaptops();
+                dgvLaptops.Rows.Clear();
+                foreach (var laptop in laptops)
+                {
+                    dgvLaptops.Rows.Add(
+                        laptop.Id,
+                        laptop.Marca,
+                        laptop.Modelo,
+                        laptop.Procesador,
+                        laptop.RAM,
+                        laptop.Almacenamiento,
+                        laptop.Precio,
+                        laptop.ImagenUrl,
+                        laptop.Stock
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)

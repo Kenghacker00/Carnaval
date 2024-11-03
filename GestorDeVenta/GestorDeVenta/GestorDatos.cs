@@ -113,27 +113,55 @@ namespace GestorDeVenta
         public List<Laptop> ObtenerLaptops()
         {
             List<Laptop> laptops = new List<Laptop>();
-            if (File.Exists(ArchivoLaptops))
-            {
-                var file = new FileInfo(ArchivoLaptops);
-                using (var package = new ExcelPackage(file))
-                {
-                    var worksheet = package.Workbook.Worksheets[0];
-                    int rows = worksheet.Dimension.Rows;
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ArchivoLaptops);
 
+            if (!File.Exists(filePath))
+            {
+                // Si el archivo no existe, créalo con una hoja y encabezados
+                using (var package = new ExcelPackage(new FileInfo(filePath)))
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("Laptops");
+                    worksheet.Cells["A1"].Value = "Id";
+                    worksheet.Cells["B1"].Value = "Marca";
+                    worksheet.Cells["C1"].Value = "Modelo";
+                    worksheet.Cells["D1"].Value = "Procesador";
+                    worksheet.Cells["E1"].Value = "RAM";
+                    worksheet.Cells["F1"].Value = "Almacenamiento";
+                    worksheet.Cells["G1"].Value = "Precio";
+                    worksheet.Cells["H1"].Value = "ImagenUrl";
+                    worksheet.Cells["I1"].Value = "Stock";
+                    package.Save();
+                }
+                return laptops; // Retorna una lista vacía
+            }
+
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                if (worksheet.Dimension == null)
+                {
+                    // El archivo está vacío, no hay datos que leer
+                    return laptops;
+                }
+
+                int rows = worksheet.Dimension.Rows;
+                int cols = worksheet.Dimension.Columns;
+
+                if (rows > 1) // Si hay datos además de los encabezados
+                {
                     for (int row = 2; row <= rows; row++)
                     {
                         Laptop laptop = new Laptop
                         {
-                            Id = int.Parse(worksheet.Cells[row, 1].Value.ToString()),
-                            Marca = worksheet.Cells[row, 2].Value.ToString(),
-                            Modelo = worksheet.Cells[row, 3].Value.ToString(),
-                            Procesador = worksheet.Cells[row, 4].Value.ToString(),
-                            RAM = int.Parse(worksheet.Cells[row, 5].Value.ToString()),
-                            Almacenamiento = worksheet.Cells[row, 6].Value.ToString(),
-                            Precio = decimal.Parse(worksheet.Cells[row, 7].Value.ToString()),
-                            ImagenUrl = worksheet.Cells[row, 8].Value.ToString(),
-                            Stock = int.Parse(worksheet.Cells[row, 9].Value.ToString())
+                            Id = int.Parse(worksheet.Cells[row, 1].Value?.ToString() ?? "0"),
+                            Marca = worksheet.Cells[row, 2].Value?.ToString() ?? "",
+                            Modelo = worksheet.Cells[row, 3].Value?.ToString() ?? "",
+                            Procesador = worksheet.Cells[row, 4].Value?.ToString() ?? "",
+                            RAM = int.Parse(worksheet.Cells[row, 5].Value?.ToString() ?? "0"),
+                            Almacenamiento = worksheet.Cells[row, 6].Value?.ToString() ?? "",
+                            Precio = decimal.Parse(worksheet.Cells[row, 7].Value?.ToString() ?? "0"),
+                            ImagenUrl = worksheet.Cells[row, 8].Value?.ToString() ?? "",
+                            Stock = int.Parse(worksheet.Cells[row, 9].Value?.ToString() ?? "0")
                         };
                         laptops.Add(laptop);
                     }
@@ -142,22 +170,76 @@ namespace GestorDeVenta
             return laptops;
         }
 
+        public void AgregarLaptop(Laptop laptop)
+        {
+            using (var package = new ExcelPackage(new FileInfo(ArchivoLaptops)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                int row = worksheet.Dimension.Rows + 1;
+
+                worksheet.Cells[row, 1].Value = laptop.Id;
+                worksheet.Cells[row, 2].Value = laptop.Marca;
+                worksheet.Cells[row, 3].Value = laptop.Modelo;
+                worksheet.Cells[row, 4].Value = laptop.Procesador;
+                worksheet.Cells[row, 5].Value = laptop.RAM;
+                worksheet.Cells[row, 6].Value = laptop.Almacenamiento;
+                worksheet.Cells[row, 7].Value = laptop.Precio;
+                worksheet.Cells[row, 8].Value = laptop.ImagenUrl;
+                worksheet.Cells[row, 9].Value = laptop.Stock;
+
+                package.Save();
+            }
+        }
+
         public void ActualizarLaptop(Laptop laptop)
         {
+            using (var package = new ExcelPackage(new FileInfo(ArchivoLaptops)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                int rows = worksheet.Dimension.Rows;
+
+                for (int row = 2; row <= rows; row++)
+                {
+                    if (int.Parse(worksheet.Cells[row, 1].Value.ToString()) == laptop.Id)
+                    {
+                        worksheet.Cells[row, 2].Value = laptop.Marca;
+                        worksheet.Cells[row, 3].Value = laptop.Modelo;
+                        worksheet.Cells[row, 4].Value = laptop.Procesador;
+                        worksheet.Cells[row, 5].Value = laptop.RAM;
+                        worksheet.Cells[row, 6].Value = laptop.Almacenamiento;
+                        worksheet.Cells[row, 7].Value = laptop.Precio;
+                        worksheet.Cells[row, 8].Value = laptop.ImagenUrl;
+                        worksheet.Cells[row, 9].Value = laptop.Stock;
+                        break;
+                    }
+                }
+
+                package.Save();
+            }
 
         }
 
         public void EliminarLaptop(int id)
         {
+            using (var package = new ExcelPackage(new FileInfo(ArchivoLaptops)))
+            {
+                var worksheet = package.Workbook.Worksheets[0];
+                int rows = worksheet.Dimension.Rows;
 
+                for (int row = 2; row <= rows; row++)
+                {
+                    if (int.Parse(worksheet.Cells[row, 1].Value.ToString()) == id)
+                    {
+                        worksheet.DeleteRow(row);
+                        break;
+                    }
+                }
+
+                package.Save();
+            }
         }
 
         public void RegistrarVenta(Laptop laptop)
-        {
-
-        }
-
-        public void AgregarLaptop(Laptop laptop)
         {
 
         }
