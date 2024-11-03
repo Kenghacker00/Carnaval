@@ -25,6 +25,8 @@ namespace GestorDeVenta
             if (gestorDatos.EsAdmin(e_mail, contrasenia))
             {
                 VerificarClaveAdmin();
+                AdminPanel adminPanel = new AdminPanel();
+                adminPanel.Show();
             }
 
             else if (gestorDatos.UsuarioRegistrado(e_mail, contrasenia))

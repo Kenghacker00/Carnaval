@@ -14,6 +14,8 @@ namespace GestorDeVenta
     {
         private const string Usuarios = "users.xlsx";
         private const string Registros = "registros.xslx";
+        private const string ArchivoLaptops = "laptops.xlsx";
+        private const string ArchivoVentas = "ventas.xlsx";
 
         public void CargarUsuarios()
         {
@@ -105,6 +107,59 @@ namespace GestorDeVenta
         public bool EsAdmin(string email, string password)
         {
             return email == "juanaragoncruz@aragonsolutions.net" && password == "juan35";
+
+        }
+
+        public List<Laptop> ObtenerLaptops()
+        {
+            List<Laptop> laptops = new List<Laptop>();
+            if (File.Exists(ArchivoLaptops))
+            {
+                var file = new FileInfo(ArchivoLaptops);
+                using (var package = new ExcelPackage(file))
+                {
+                    var worksheet = package.Workbook.Worksheets[0];
+                    int rows = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rows; row++)
+                    {
+                        Laptop laptop = new Laptop
+                        {
+                            Id = int.Parse(worksheet.Cells[row, 1].Value.ToString()),
+                            Marca = worksheet.Cells[row, 2].Value.ToString(),
+                            Modelo = worksheet.Cells[row, 3].Value.ToString(),
+                            Procesador = worksheet.Cells[row, 4].Value.ToString(),
+                            RAM = int.Parse(worksheet.Cells[row, 5].Value.ToString()),
+                            Almacenamiento = worksheet.Cells[row, 6].Value.ToString(),
+                            Precio = decimal.Parse(worksheet.Cells[row, 7].Value.ToString()),
+                            ImagenUrl = worksheet.Cells[row, 8].Value.ToString(),
+                            Stock = int.Parse(worksheet.Cells[row, 9].Value.ToString())
+                        };
+                        laptops.Add(laptop);
+                    }
+                }
+            }
+            return laptops;
+        }
+
+        public void ActualizarLaptop(Laptop laptop)
+        {
+
+        }
+
+        public void EliminarLaptop(int id)
+        {
+
+        }
+
+        public void RegistrarVenta(Laptop laptop)
+        {
+
+        }
+
+        public void AgregarLaptop(Laptop laptop)
+        {
+
         }
 
     }

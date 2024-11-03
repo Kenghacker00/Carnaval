@@ -1,6 +1,6 @@
 ﻿namespace GestorDeVenta
 {
-    partial class Catalogo
+    partial class AdminPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // Catalogo
+            // AdminPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "Catalogo";
-            Text = "Catalogo";
-            Load += Catalogo_Load;
+            ClientSize = new Size(1016, 450);
+            Name = "AdminPanel";
+            Text = "AdminPanel";
+            Load += AdminPanel_Load;
             ResumeLayout(false);
         }
 

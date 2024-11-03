@@ -1,6 +1,6 @@
 ﻿namespace GestorDeVenta
 {
-    partial class Catalogo
+    partial class FormLaptop
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // Catalogo
+            // FormLaptop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "Catalogo";
-            Text = "Catalogo";
-            Load += Catalogo_Load;
+            ClientSize = new Size(1048, 450);
+            Name = "FormLaptop";
+            Text = "FormLaptop";
+            Load += FormLaptop_Load;
             ResumeLayout(false);
         }
 
