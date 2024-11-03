@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistro));
             panelRegistro = new Panel();
+            pictureBox1 = new PictureBox();
+            txtEdad = new TextBox();
             txtEmail = new TextBox();
             label3 = new Label();
             btnRegistrar = new Button();
@@ -38,13 +41,16 @@
             label1 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panelRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelRegistro
             // 
             panelRegistro.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelRegistro.BackColor = Color.MediumAquamarine;
+            panelRegistro.BackColor = Color.MediumTurquoise;
             panelRegistro.BorderStyle = BorderStyle.FixedSingle;
+            panelRegistro.Controls.Add(pictureBox1);
+            panelRegistro.Controls.Add(txtEdad);
             panelRegistro.Controls.Add(txtEmail);
             panelRegistro.Controls.Add(label3);
             panelRegistro.Controls.Add(btnRegistrar);
@@ -57,16 +63,36 @@
             panelRegistro.Size = new Size(907, 573);
             panelRegistro.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(354, -2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(184, 146);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
+            // txtEdad
+            // 
+            txtEdad.AccessibleName = "";
+            txtEdad.Location = new Point(354, 238);
+            txtEdad.Name = "txtEdad";
+            txtEdad.PlaceholderText = "Edad";
+            txtEdad.Size = new Size(189, 27);
+            txtEdad.TabIndex = 9;
+            txtEdad.Tag = "";
+            // 
             // txtEmail
             // 
             txtEmail.AccessibleName = "";
-            txtEmail.Location = new Point(354, 251);
+            txtEmail.Location = new Point(354, 283);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email";
             txtEmail.Size = new Size(189, 27);
             txtEmail.TabIndex = 8;
             txtEmail.Tag = "";
-            txtEmail.Leave += this.txtEmail_Leave;
+            txtEmail.Leave += txtEmail_Leave;
             // 
             // label3
             // 
@@ -102,7 +128,7 @@
             // 
             // txtContra
             // 
-            txtContra.Location = new Point(354, 316);
+            txtContra.Location = new Point(354, 330);
             txtContra.Name = "txtContra";
             txtContra.PlaceholderText = "Contraseña";
             txtContra.Size = new Size(189, 27);
@@ -125,7 +151,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Bahnschrift SemiBold Condensed", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Teal;
-            label1.Location = new Point(373, 48);
+            label1.Location = new Point(382, 144);
             label1.Name = "label1";
             label1.Size = new Size(124, 41);
             label1.TabIndex = 2;
@@ -145,6 +171,7 @@
             WindowState = FormWindowState.Maximized;
             panelRegistro.ResumeLayout(false);
             panelRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -159,5 +186,7 @@
         private Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private TextBox txtEmail;
+        private TextBox txtEdad;
+        private PictureBox pictureBox1;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -11,7 +12,7 @@ namespace GestorDeVenta
     public class Usuario
     {
         private string nombre;
-        private string email;
+        public string Email { get; set; }
         private string contraseña;
         private int edad;
 
@@ -40,15 +41,10 @@ namespace GestorDeVenta
             }
         }
 
-        public string Email
+        public static bool ValidarEmail(string email)
         {
-            get { return email; }
-            set
-            {
-                string patron = @"^[\w-\.]+@aragonsolutions\.net$";
-                Regex rgx = new Regex(patron);
-                throw new ArgumentException("El email debe ser de dominio '@aragonsolutions.net'");
-            }
+            string patron = @"^[\w-\.]+@aragonsolutions\.net$";
+            return Regex.IsMatch(email, patron);
         }
 
         public string Contraseña

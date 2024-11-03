@@ -34,11 +34,12 @@
             btnRegistrar = new Button();
             btnIniciar = new Button();
             txtContra = new TextBox();
-            txtUsuario = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             panelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelLogin
@@ -46,11 +47,11 @@
             panelLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelLogin.BackgroundImage = (Image)resources.GetObject("panelLogin.BackgroundImage");
             panelLogin.BorderStyle = BorderStyle.FixedSingle;
+            panelLogin.Controls.Add(pictureBox1);
             panelLogin.Controls.Add(txtEmail);
             panelLogin.Controls.Add(btnRegistrar);
             panelLogin.Controls.Add(btnIniciar);
             panelLogin.Controls.Add(txtContra);
-            panelLogin.Controls.Add(txtUsuario);
             panelLogin.Controls.Add(label3);
             panelLogin.Controls.Add(label2);
             panelLogin.Controls.Add(label1);
@@ -100,16 +101,6 @@
             txtContra.Size = new Size(189, 27);
             txtContra.TabIndex = 4;
             // 
-            // txtUsuario
-            // 
-            txtUsuario.AccessibleName = "";
-            txtUsuario.Location = new Point(354, 224);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.PlaceholderText = "Nombre";
-            txtUsuario.Size = new Size(189, 27);
-            txtUsuario.TabIndex = 3;
-            txtUsuario.Tag = "";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -146,6 +137,16 @@
             label1.TabIndex = 0;
             label1.Text = "BIENVENIDO !";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(354, 40);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(184, 146);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -161,6 +162,7 @@
             Load += Form1_Load;
             panelLogin.ResumeLayout(false);
             panelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -168,12 +170,12 @@
 
         private Panel panelLogin;
         private Label label1;
-        private TextBox txtUsuario;
         private Label label3;
         private Label label2;
         private Button btnRegistrar;
         private Button btnIniciar;
         private TextBox txtContra;
         private TextBox txtEmail;
+        private PictureBox pictureBox1;
     }
 }

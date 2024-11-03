@@ -6,15 +6,15 @@ namespace GestorDeVenta
 {
     public partial class FormRegistro : BaseForm
     {
+        private GestorDatos gestorDatos = new GestorDatos();
+
         public FormRegistro()
         {
             InitializeComponent();
         }
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-            string patron = @"^[\w-\.]+@aragonsolutions\.net$";
-            Regex rgx = new Regex(patron);
-            if (!rgx.IsMatch(txtEmail.Text))
+            if (!txtEmail.Text.EndsWith("@aragonsolutions.net"))
             {
                 MessageBox.Show("El correo debe terminar en '@aragonsolutions.net'");
             }
@@ -37,11 +37,25 @@ namespace GestorDeVenta
                 return;
             }
 
+            try
+            {
+                Usuario nuevoUsuario = new Usuario
+                {
+                    Nombre = txtUsuario.Text,
+                    Email = txtEmail.Text,
+                    Contraseña = txtContra.Text,
+                    Edad = int.Parse(txtEdad.Text)
 
-            MessageBox.Show("Usuario registrado con éxito!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Form1 f = new Form1();
-            f.ShowDialog();
-            this.Close();
+                };
+                gestorDatos.RegistrarUsuarios(nuevoUsuario);
+                Form1 f = new Form1();
+                f.ShowDialog();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);              
+            }
         }
     }
 }

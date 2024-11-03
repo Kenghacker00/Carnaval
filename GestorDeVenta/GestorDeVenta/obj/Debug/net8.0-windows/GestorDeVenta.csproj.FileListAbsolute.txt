@@ -70,3 +70,42 @@ C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorD
 C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.genruntimeconfig.cache
 C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\ref\GestorDeVenta.dll
 C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.FormRegistro.resources
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\GestorDeVenta.exe
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\GestorDeVenta.deps.json
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\GestorDeVenta.runtimeconfig.json
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\GestorDeVenta.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\GestorDeVenta.pdb
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.csproj.AssemblyReference.cache
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.Catalogo.resources
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.Form1.resources
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.FormRegistro.resources
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.Properties.Resources.resources
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.csproj.GenerateResource.cache
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.AssemblyInfoInputs.cache
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.AssemblyInfo.cs
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.csproj.CoreCompileInputs.cache
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.sourcelink.json
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDe.4A40EAB0.Up2Date
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\refint\GestorDeVenta.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.pdb
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.genruntimeconfig.cache
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\ref\GestorDeVenta.dll
+C:\Users\USER\Aragon Solutions\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.BaseForm.resources
+C:\Users\hfgon\OneDrive\Desktop\C# LENOVO\Final Proyect\Aragon_Solutions\GestorDeVenta\GestorDeVenta\obj\Debug\net8.0-windows\GestorDeVenta.BaseForm.resources
